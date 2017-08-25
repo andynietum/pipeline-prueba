@@ -9,6 +9,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn clean compile'
+		archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
 	}
     }
