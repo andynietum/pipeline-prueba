@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn clean install'
-		archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
+		archiveArtifacts artifacts: '**/target/*.war', fingerprint: true 
             }
 	}
     }
