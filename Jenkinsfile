@@ -8,7 +8,7 @@ pipeline {
             agent { docker 'maven:3.5.0-jdk-8-alpine' } 
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn clean compile'
+                sh 'mvn clean install'
 		archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true 
             }
 	}
