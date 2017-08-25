@@ -2,8 +2,7 @@
 
 node {
 
-      stage 'Compilar'    
-   
+  
            stage('Example Build') {
             agent { docker 'maven:3.5.0-jdk-8-alpine' } 
             steps {
