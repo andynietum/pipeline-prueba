@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Hello, Tomcat'
 		sshagent(['Jenkins-Tomcat']) {
-	             scp target/rest-0.0.1-SNAPSHOT.war 172.17.0.3:/usr/local/tomcat/webapps
+	             sh 'scp target/rest-0.0.1-SNAPSHOT.war 172.17.0.3:/usr/local/tomcat/webapps'
 		}
             }
 	}
