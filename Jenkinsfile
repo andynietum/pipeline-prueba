@@ -4,13 +4,7 @@ pipeline {
     agent any 
 
     stages {  
-        stage('Build') {
-            agent { docker 'maven:3.5.0-jdk-8-alpine' } 
-            steps {
-                sh 'mvn clean install'
-		archiveArtifacts artifacts: '**/target/*.war', fingerprint: true 
-            }
-	}
+
 	stage('Deploy') {
             agent { docker 'tomcat:8.0-java8' } 
             steps {
