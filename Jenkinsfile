@@ -1,10 +1,10 @@
 pipeline {
   agent any
 
- environment {
-	JAVA_HOME="${tool 'JDK-8u131'}"
-	PATH="${env.JAVA_HOME}/bin:${env.PATH}"	
- }
+
+  tools { 
+        jdk 'JDK-8u131' 
+    }
 
   stages {
     stage('Deploy') {
