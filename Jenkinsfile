@@ -11,6 +11,6 @@ pipeline {
     jdk 'JDK-8u131'
   }
   environment {
-    JAVA_HOME = ''
+    CLASSPATH = '/home/andres/Oracle/Middleware/Oracle_Home/wlserver/server/lib/weblogic.jar'
   }
 }
